@@ -1,0 +1,15 @@
+version: '2'
+services:
+  sx-ubuntu:
+    image: sx/ubuntu14.04:3.7.b
+    container_name: hzy_ubuntu
+    restart: always
+    tty: true
+    ports:
+      - "8110:8888"
+      - "8111:8889"
+    devices:
+      - /dev/nvidia0
+    volumes:
+      - ~/hzy/dl-data:/root/dl-data
+      - ~/sxwl-dataset:/root/sxwl-dataset

@@ -1,0 +1,21 @@
+services:
+  sx-ubuntu:
+    container_name: hzy_ubuntu
+    devices:
+    - /dev/nvidia0
+    - /dev/nvidiactl
+    - /dev/nvidia-uvm
+    image: sx/ubuntu14.04:3.7.b
+    ports:
+    - 8110:8888
+    - 8111:8889
+    restart: always
+    tty: true
+    volumes:
+    - ~/hzy/dl-data:/root/dl-data
+    - ~/sxwl-dataset:/root/sxwl-dataset
+    - nvidia_driver_367.57:/usr/local/nvidia:ro
+version: '2'
+volumes:
+  nvidia_driver_367.57:
+    external: true
