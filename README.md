@@ -3,7 +3,7 @@
 Sometimes we use our docker to start our own services, but when docker restart, we have to get into our dockers to start 
 the services by hand.
 
-The docker supervisor will help us to solve this problem, after using docker supervisor, our services will alse restart when 
+The docker supervisor will help us to solve this problem, after using docker supervisor, our services will also restart when 
 docker restart.
 
 This README will show u how to use the supervisor to predict the services in your docker by the example of frpc service.
